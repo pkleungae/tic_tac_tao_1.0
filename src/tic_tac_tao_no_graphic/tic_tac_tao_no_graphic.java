@@ -64,13 +64,17 @@ public class tic_tac_tao_no_graphic {
 			System.out.println("Input o location");
 		
 		int row = in.nextInt() - 1;  // array index starts at 0 instead of 1
-        int col = in.nextInt() - 1;
+        	int col = in.nextInt() - 1;
         
-        if (isValid(row,col)) {
-        	table[row][col] = currentPlayer;
-        }
-        else 
+      		 if (!isValid(row,col)) {
         	System.out.println("Please ENTER VALID location");
+        
+      		  }
+     
+        
+		}while(!isValid(row,col));
+		
+		table[row][col] = currentPlayer;
         
         
 	}
